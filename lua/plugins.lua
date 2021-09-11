@@ -46,6 +46,7 @@ packer.startup(function()
 		'kyazdani42/nvim-tree.lua',
 		requires = 'kyazdani42/nvim-web-devicons'
 	}
+	use 'glepnir/lspsaga.nvim'
 	use 'b3nj5m1n/kommentary'
 	use 'ray-x/go.nvim'
 end
@@ -136,3 +137,5 @@ require('gitsigns').setup({
     relative_time = true
   },
 })
+
+require('lspsaga').init_lsp_saga()
