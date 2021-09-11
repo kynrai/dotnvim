@@ -47,6 +47,7 @@ packer.startup(function()
 		requires = 'kyazdani42/nvim-web-devicons'
 	}
 	use 'b3nj5m1n/kommentary'
+	use 'ray-x/go.nvim'
 end
 )
 
