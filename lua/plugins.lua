@@ -46,6 +46,7 @@ packer.startup(function()
 		'kyazdani42/nvim-tree.lua',
 		requires = 'kyazdani42/nvim-web-devicons'
 	}
+	use 'norcalli/snippets.nvim'
 	use 'glepnir/lspsaga.nvim'
 	use 'b3nj5m1n/kommentary'
 	use 'ray-x/go.nvim'
@@ -116,6 +117,8 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+vim.g.completion_enable_snippet = 'snippets.nvim'
+
 -- TODO https://github.com/nvim-lua/completion-nvim Add more snippets and completion sources
 -- Setup completion on all buffers
 vim.cmd('autocmd BufEnter * lua require\'completion\'.on_attach()')
@@ -137,5 +140,7 @@ require('gitsigns').setup({
     relative_time = true
   },
 })
+
+require'snippets'.snippets = {}
 
 require('lspsaga').init_lsp_saga()
